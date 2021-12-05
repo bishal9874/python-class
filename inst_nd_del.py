@@ -1,28 +1,32 @@
 
 lst=[]
 lst_size= int(input("enter the size of list: "))
+
 def list_entries(nlist,n):
     for i in range(n):
         val= int(input("enter value: "))
         nlist.append(val)
     print("list is : ",nlist)
+    loop()
     
-    print("1. If you want to insert element")
-    print("2. If you want del element")
-    print("3. Exit")
-    choice_want(int(input("Enter your Choice: ")))
-    
+def loop():
+        while 1:
+            print("1. If you want to insert element")
+            print("2. If you want del element")
+            print("3. Exit")
+            choice_want(int(input("Enter your Choice: ")))
+         
 # choice case   
 
 def choice_want(choi):
     if(choi==1):
         insert_sp(lst,
           int(input("enter a value to insert :")),
-          int(input("enter the position :")),lst_size),""
+          int(input("enter the position :")),lst_size)         
     elif(choi==2):
         del_element(lst,int(input("enter the element to delete from list: ")),lst_size)
     elif(choi==3):
-        exit
+        exit(loop)
     else:
         print("invaild entry")
         
@@ -51,5 +55,5 @@ def del_element(lis,key,sze):
             break
     else:
         print("enter element not found in list")
-
+# call function 
 list_entries(lst,lst_size)
