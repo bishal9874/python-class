@@ -12,7 +12,7 @@ def list_entries(nlist,n):
 def loop():
         while 1:
             print("1. If you want to insert element")
-            print("2. If you want del element")
+            print("2. If you want delete element")
             print("3. Exit")
             choice_want(int(input("Enter your Choice: ")))
          
