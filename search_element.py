@@ -1,4 +1,4 @@
-lst=eval(input("Enter list:"))
+lst=[1,5,9,7,6,3]
 length=len(lst)
 element=int(input("Enter element to be searched for:"))
 for i in range(0,length):
